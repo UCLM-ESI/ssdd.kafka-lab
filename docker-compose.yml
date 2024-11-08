@@ -1,0 +1,10 @@
+services:
+  kafka:
+    container_name: kafka
+    image: quay.io/ccxdev/kafka-no-zk:latest
+    hostname: kafka
+    ports:
+      - 9092:9092
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_CREATE_TOPICS=example:2:1
