@@ -7,4 +7,4 @@ services:
       - 9092:9092
     environment:
       - KAFKA_ADVERTISED_HOST_NAME=kafka
-      - KAFKA_CREATE_TOPICS=example:2:1
+      - KAFKA_CREATE_TOPICS=topic-name:2:1
