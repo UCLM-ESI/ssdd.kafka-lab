@@ -6,5 +6,5 @@ services:
     ports:
       - 9092:9092
     environment:
-      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_ADVERTISED_HOST_NAME=localhost
       - KAFKA_CREATE_TOPICS=topic-name:2:1
