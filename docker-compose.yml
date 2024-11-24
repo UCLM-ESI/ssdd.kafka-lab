@@ -7,4 +7,4 @@ services:
       - 9092:9092
     environment:
       - KAFKA_ADVERTISED_HOST_NAME=localhost
-      - KAFKA_CREATE_TOPICS=topic-name:2:1
+      - KAFKA_CREATE_TOPICS=proxy_check:16:1,check_result:2:1
