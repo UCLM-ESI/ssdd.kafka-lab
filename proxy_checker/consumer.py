@@ -23,6 +23,7 @@ class Receiver:
     def run(self):
         while True:
             for msg in self.kconsumer.consume():
+                print("Msg received...")
                 self.process_single_event(msg.value())
     
     def process_single_event(self, value: bytes) -> None:
@@ -31,6 +32,7 @@ class Receiver:
             event = json.loads(value)
 
             if not isinstance(event, dict):
+                print("Message discarded")
                 return
 
             proxy = self.comm.stringToProxy(event.get("proxy"))
@@ -39,6 +41,7 @@ class Receiver:
             worker.start()
 
         except json.JSONDecodeError as ex:
+            print("Message discarded")            
             return
     
     def __del__(self):
