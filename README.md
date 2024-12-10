@@ -1,6 +1,6 @@
 # Repositorio de herramientas de Kafka para la sesión de laboratorio
 
-## Depliegue del servicio
+## Depliegue del servicio Kafka
 
 Utilizando el Docker Compose:
 

@@ -1,6 +1,6 @@
 import sys
 
-from .consumer import Receiver
+from .receiver import Receiver
 from .publisher import Publisher
 
 
