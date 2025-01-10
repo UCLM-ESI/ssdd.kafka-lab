@@ -7,12 +7,14 @@ services:
       - 9092:9092
     environment:
       - KAFKA_ADVERTISED_HOST_NAME=localhost
-      - KAFKA_CREATE_TOPICS=operations:16:1,results:2:1
+      - KAFKA_CREATE_TOPICS=main_topic:1:1
 
   remotetypes:
     container_name: remotetypes
     image: ghcr.io/uclm-esi/ssdd.remote-types-solution:latest
     hostname: remotetypes
+    ports:
+      - 10000:10000
     environment:
       - FACTORY_PORT=10000
     volumes:
